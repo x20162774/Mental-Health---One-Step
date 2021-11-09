@@ -1,0 +1,656 @@
+/* https://google-webfonts-helper.herokuapp.com/fonts/montserrat?subsets=latin for Font used*/
+/* nunito-300 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/nunito-v16-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/nunito-v16-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nunito-v16-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nunito-v16-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nunito-v16-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nunito-v16-latin-300.svg#Nunito') format('svg'); /* Legacy iOS */
+	font-display: swap;
+}
+/* nunito-regular - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/nunito-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/nunito-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nunito-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nunito-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nunito-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nunito-v16-latin-regular.svg#Nunito') format('svg'); /* Legacy iOS */
+	font-display: swap;
+}
+/* nunito-italic - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/nunito-v16-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/nunito-v16-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nunito-v16-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nunito-v16-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nunito-v16-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nunito-v16-latin-italic.svg#Nunito') format('svg'); /* Legacy iOS */
+	font-display: swap;
+}
+/* nunito-600 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/nunito-v16-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/nunito-v16-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nunito-v16-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nunito-v16-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nunito-v16-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nunito-v16-latin-600.svg#Nunito') format('svg'); /* Legacy iOS */
+	font-display: swap;
+}
+/* nunito-700 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/nunito-v16-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/nunito-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nunito-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nunito-v16-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nunito-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nunito-v16-latin-700.svg#Nunito') format('svg'); /* Legacy iOS */
+	font-display: swap;
+}
+
+/* general html definitions for onepage site layout */
+html {
+	scroll-behavior: smooth; /* scroll behavior method does not work in Safari or Opera mini: https://caniuse.com/?search=scroll-behaviour */
+	height: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* prevent horisontal scroll, reference: https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll */
+	font-size: 16px; /* setting the base font size in pixels so that rem units can refer to this responsively */
+}
+/* general definitons for margins and paddings and to prevent browser's native functionality to add paddings and margins to elements by defining box-sizing property with border-box value */
+*{
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+/* general body color, font-size, screen area height and font-family definitons */
+body {
+	color: #003B4A;
+	font-size: 16px;
+    height:100%;
+	font-family: 'Nunito', Nunito;
+	}
+/* font size media queries for large laptops and desktop */
+h1 {
+	font-size: 4rem;
+	line-height: 1;
+	color: #003B4A;
+	text-align: center;
+}
+h2 {
+	font-size: 3.5rem;
+	line-height: 1;
+	color: #1ABC9C;
+	text-align: center;
+}
+h3 {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #1ABC9C;
+	text-align: center;
+}
+/* media query for bigger sceens, starting from L-sized laptop - grid is more suitable for galleries than flexbox: https://css-tricks.com/equal-columns-with-flexbox-its-more-complicated-than-you-might-think/ 
+w3schools.com on CSS grid-template-column property: https://www.w3schools.com/cssref/pr_grid-template-columns.asp */
+@media only screen and (min-width:1440px) {
+	.gallery-grid {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: auto auto auto auto;
+	}
+}
+/* gallery media queries for smaller than large laptops */
+@media only screen and (max-width:1439px) {
+	#gallery.section {
+		height: auto !important;
+		padding-bottom: 100px;
+	}
+	.gallery-grid {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: auto auto;
+	}
+	/* link to scroll fix for gallery section's anchor, reference: https://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to */
+	#gallery {
+		scroll-margin-top: 100px;
+	}
+}
+/* font size media queries for small laptops */
+@media only screen and (min-width:1024px) and (max-width:1439px) {
+	h1 {
+		font-size: 3rem;
+		line-height: 1;
+		color: #003B4A;
+		text-align: center;
+	}
+	h2 {
+		font-size: 2.5rem;
+		line-height: 1;
+		color: #1ABC9C;
+		text-align: center;
+	}
+	h3 {
+		font-size: 1.4rem;
+		line-height: 1.5;
+		color: #1ABC9C;
+		text-align: center;
+	}
+}
+/* font size media queries for phablet screens and really small laptops */
+@media only screen and (min-width:980px) and (max-width:1023px) {
+	h1 {
+		font-size: 3rem;
+		line-height: 1;
+		color: #003B4A;
+		text-align: center;
+	}
+	h2 {
+		font-size: 2.5rem;
+		line-height: 1;
+		color: #1ABC9C;
+		text-align: center;
+	}
+	h3 {
+		font-size: 1.5rem;
+		line-height: 1.5;
+		color: #1ABC9C;
+		text-align: center;
+	}
+}
+/* font size media queries for tablet screens */
+@media only screen and (min-width:768px) and (max-width:979px) {
+	h1 {
+		font-size: 2.5rem;
+		line-height: 1;
+		color: #003B4A;
+		text-align: center;
+	}
+	h2 {
+		font-size: 2rem;
+		line-height: 1;
+		color: #1ABC9C;
+		text-align: center;
+	}
+	h3 {
+		font-size: 1.5rem;
+		line-height: 1.5;
+		color: #1ABC9C;
+		text-align: center;
+	}
+}
+/* font size media queries for mobile device screens */
+@media only screen and (max-width:767px) {
+	h1 {
+		font-size: 1.8rem;
+		line-height: 1;
+		color: #003B4A;
+		text-align: center;
+	}
+	h2 {
+		font-size: 1.5rem;
+		line-height: 1;
+		color: #1ABC9C;
+		text-align: center;
+	}
+	h3 {
+		font-size: 1.2rem;
+		line-height: 1.5;
+		color: #1ABC9C;
+		text-align: center;
+	}
+	#home {
+		padding-top: 150px;
+	}
+}
+/* paragraph general size style and line-height definition */
+p {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #003B4A;
+	text-align: center;
+}
+/* header area shadow with different browser pre-fixes to ensure compatibility */
+.header {
+    -webkit-box-shadow: 0px 0px 9px 3px rgb(42 42 42 / 20%);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(42,42,42,.20);
+    box-shadow: 0px 0px 9px 3px rgb(42 42 42 / 25%);
+    width: 100%;
+    height: 120px;
+    z-index: 9999;
+    position: fixed;
+}
+/* top header area styles */
+.top-header {
+	padding: 0 60px;
+	position: fixed;
+	background: #003B4A;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	height: 40px;
+}
+/* top header paragraph styles */
+.top-header p {
+	font-size: 1.2rem;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+.top-header a {
+	margin-left: 5px;
+	text-decoration: none;
+	color: #FFF;
+}
+.container {
+	max-width: 300px;
+	width: 100%;
+}
+/* main header area CSS below top header */
+.main-header {
+	position: fixed;
+	width: 100%;
+	top: 40px;
+	display: flex;
+	flex-direction: row;
+	height: 80px;
+	color: white;
+	font-size: 30px;
+	background: #FFFFFF;
+	padding: 0 60px;
+}
+/* logo area inside main-header, reference to flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.logo-area {
+	position: relative;
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+    max-width: 100%;
+    width: 25vw;
+	margin: 0;
+}
+/* setting logoarea image to block to set the correct area for hyperlink #home */
+.logo-area img {
+	display: block;
+}
+/* main header's right column definitions */
+.column-right {
+	position: relative;
+	align-items: center;
+	max-width: 100%;
+	width: 75%;
+	margin: auto;
+	justify-content: flex-end;
+	
+}
+/* navigation definitions with flexbox */
+.nav {
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+}
+/* navigation list-item definitions to make menu-items look appealing */
+.nav li {
+	font-size: 24px;
+	color: #003B4A;
+	list-style: none;
+}
+/* navigation list-item's hyperlink styling */
+.nav li a {
+	padding: 10px;
+	text-decoration: none;
+	color: #003B4A;
+}
+/* hide burger icon initially on desktop and laptop */
+.nav .burger-icon {
+	display: none;
+}
+/* When the screen is less than 979 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
+@media only screen and (max-width: 767px) {
+	.nav li a {display: none;}
+	.nav li a.burger-icon {
+		position: fixed;
+		right: 30px;
+		top: 55px;
+		display: block;
+	}
+}
+/* media queries to set upt different section values for screens that are the size of a tablet or larger */
+@media only screen and (min-width:768px) {
+	/* section flexbox styling */
+	.section {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 100vw;
+		height: 100vh;
+	}
+	/* Self-Care flex column layout for larger screens */
+	#Self-Care .column {
+		flex: 0 0 32%;
+	}
+	/* section container padding for larger screens */
+	.section-container {
+		padding: 0 60px;
+	}
+	/* images responsive behavior, reference w3schools: https://www.w3schools.com/howto/howto_css_image_responsive.asp */
+	.responsive {
+		width: 100%;
+		max-width: 350px;
+		height: auto;
+	}
+}
+/* media queries to define different sections of the site for mobile device screens smaller than tablet */
+@media only screen and (max-width: 767px) {
+	/* section styling for mobile */
+	.section {
+		height: auto;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	/* top and main header area padding styling */
+	.top-header,.main-header  {
+		padding: 0 25px;
+	}
+	/* section container's padding smaller for mobile devices */
+	.section-container {
+		padding: 0 25px;
+	}
+	/* Self-Care section small screen fullwidth styling */
+	#Self-Care .column {
+		flex: 0 0 100%;
+	}
+	/* responsive images smalls screen styling */
+	.responsive {
+		width: 100%;
+		min-width: 200px;
+	}
+	/* The "responsive-menu" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+	.nav.responsive-menu {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		left: 0;
+		top: 80px;
+		width: 100%;
+		background: #FFFFFF;
+	}
+	/* navigation list-item width */
+	.nav li {
+		width: 100%;
+	}
+	/* responsive menu list-item link styling */
+	.nav.responsive-menu li a {
+		text-align: center;
+	}
+	/* responsive menu's burger icon position styling */
+	.nav.responsive-menu a.burger-icon {
+		position: fixed;
+		right: 30px;
+		top: 55px;
+	}
+	/* responsive menu's link position styling */
+	.nav.responsive-menu a {
+		float: none;
+		display: block;
+	}
+}
+/* general button styles */
+.button {
+	padding: 12px;
+    background: #1ABC9C;
+    color: #FFFFFF;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    display: inline-flex;
+    transition: 200ms;
+}
+.centerbutton {
+	padding: 12px;
+    background: #1ABC9C;
+    color: #FFFFFF;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-left: 40%;
+    margin-right: 40%;
+    display: flex;
+    transition: 200ms;
+    justify-content: center;	
+	}
+/* self assessment buttons styling */
+.small.button {
+	display: block;
+	margin-top: -0.5rem;
+	padding: 10px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	max-width: 350px;
+}
+/* self assessment results area styling */
+.your-results {
+	padding-top: 10px;
+	max-width: 350px;
+}
+/* self assessment results bolded to a user */
+#results {
+	font-weight: bold;
+}
+/* navigation contact button styles */
+.nav .button {
+	margin-top: 0;
+	margin-left: 10px;
+	color: #FFF;
+}
+/* general button hover styles */
+.button:hover {
+	background: #FD3A59;
+	transition: 200ms;
+}
+/* home section background and font color style definitions */
+#home {
+	background: url('../img/mental-health-ireland.webp');
+	background: url('../img/mental-health-ireland.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #FFFFFF;
+}
+/* home section paragraph font size definition */
+#home p {
+	font-size: 1.3rem;
+}
+/* different section's section container style definitions */
+#Self-Care .section-container,#gallery .section-container,#contact .section-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: auto;
+}
+/* different sections' section container style definitions to limit max-width to 1400px */
+#Self-Care .section-container,#gallery .section-container {
+	max-width: 1400px;
+}
+/* contact section's section container style definitions to limit max-width to 700px */
+#contact .section-container {
+	max-width: 700px;
+}
+/* different sections' fullwidth divisions style definitions */
+#Self-Care .column.fullwidth,#gallery .column.fullwidth, #contact .column.fullwidth, #contact .form-column.fullwidth {
+	display: flex;
+	flex: 0 0 100%;
+	flex-direction: row;
+	justify-content: center;
+	padding-bottom: 3rem;
+	flex-wrap: wrap;
+}
+/* Self-Care text styling to limit width and add padding */
+.Self-care-text {
+	padding-bottom: 30px;
+	max-width: 350px;
+}
+/* Self-Care last column's text-padding property to value 0 */
+.Self-Care-text.last {
+	padding-bottom: 0;
+}
+/* gallery section's fullwidth padding definition */
+#gallery .column.fullwidth {
+	padding-top: 3rem;
+}
+/* gallery section's background color */
+#gallery {
+	background: #1ABC9C;
+}
+/* gallery section's font color */
+#gallery h2 {
+	color: #FFF;
+}
+/* gallery trigger image responsive width and pointer behavior */
+.responsive-gallery {
+	width: 100%;
+	cursor: pointer;
+	transition: 200ms;
+}
+/* modal trigger images hover effect */
+.gallery-grid img:hover {
+	opacity: 0.8;
+	}
+/* modal after clicking modal trigger images */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.9);
+}
+/* expanded modal image */
+.modal-img {
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
+/* modal image's alt text as caption */
+#caption {
+	background: rgba(0,0,0,0.25);
+	color: #FFF;
+	margin: auto;
+	display: block;
+	width: 100%;
+	max-width: 700px;
+	text-align: center;
+	padding: 50px 0;
+	height: 150px;
+	position: absolute;
+	bottom: 0;
+	left:50%;
+	transform:translate(-50%);
+}
+/* closing button for gallery modal */
+.closing-button {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 30px;
+	font-weight: bold;
+	transition: 200ms;
+}
+/* closing button hover and focus for gallery modal */
+.closing-button:hover,
+.closing-button:focus {
+	color: #FFFFFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* responsive fullwidth for modal-img for mobile screens */
+@media only screen and (max-width: 767px){
+  .modal-img {
+    width: 100%;
+  }
+}
+/* form margins, maximum width and width specified for responsive behavior */
+form {
+	margin: 0 auto;
+	max-width: 500px;
+	width: 100%;
+}
+/* form input field styling */
+input, input select, textarea {
+	padding: 12px;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+/* form submit button styling */
+input[type=submit] {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: auto;
+	font-size: 1.4rem;
+	background-color: #1ABC9C;
+	color: #FFFFFF;
+	padding: 12px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	max-width: 200px;
+	transition: 100ms;
+}
+/* form input button hover to red with 100ms transition */
+input[type=submit]:hover {
+	background-color: #FD3A59;
+	transition: 100ms;
+}
+/* light form background with border-radius of 5 pixels and padding of 20 pixels */
+#contact .form-column.fullwidth {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+/* success message padding */
+#success-message {
+	display: none;
+	padding-top: 30px;
+}
