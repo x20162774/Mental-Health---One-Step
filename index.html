@@ -1,0 +1,310 @@
+<!-- Author Ekkarin Nimbunchat -->
+<!-- Reference w3schools: https://www.w3schools.com/howto/howto_website.asp -->
+<!doctype html>
+<!-- html document lagnguage -->
+<html lang="en">
+<!-- starting tag for head which includes information about properties and external stylesheets -->
+<head>
+	<title>One-Step</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mental health advise for all struggling through the pandemic.">
+	<meta name="author" content="Ekkarin Nimbunchat">
+	<meta property="og:image" content="img/healthy-minds-logo.png">
+	<link rel="icon" href="favicon.ico">
+	<!-- favicon as svg to ensure compatibility and scalability - no loss in quality -->
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<!-- favicon for apple touch devices to be shown for them -->
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<!--  stylesheet definition to load Font awaseome library to show hamburger menu on mobile screens -->
+	<!-- link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"-->
+	<!-- fallback for browsers that do not execute javascript -->
+	<!--noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></noscript-->
+	<!-- main css stylesheet in document root's css folder -->
+	<link rel="stylesheet" href="Style.css">
+<!-- head closing tag -->
+</head>
+<!-- body document section start tag -->
+<body>
+	<!-- header section start tag -->
+	<div class="header">
+		<!-- top-header content division (div) tag to define top part of the header -->
+		<div class="top-header">
+			<!-- container class to define maximum width for left part of that section, for possible future additions to the right side above menu -->
+			<div class="container">
+			<!-- call us prompt with a phone number link inside paragraph tags -->
+			<p>Call us: <a href="tel:+353851234567">085 123 4567</a></p>
+			<!-- closing tag for container -->
+			</div>
+		<!-- closing tag for top-header class -->	
+		</div>
+		<!-- main-header css class to include the main header area separately from top header content area -->
+		<div class="main-header">
+			<!-- content area for branding/logo -->
+			<div class="logo-area">
+			<!-- logo image with home section hyperlink -->
+			<a href="#home">
+			<picture>
+				<source type="image/webp" srcset="img/healthy-minds-logo.webp">
+				<source type="image/jpeg" srcset="img/healthy-minds-logo.png">
+				<img src="img/healthy-minds-logo.png" alt="One-Step" class="responsive">
+			</picture>
+			</a>
+			<!-- closing tag for main header -->
+			</div>
+			<!-- navigation div with id topnav to be used with mobile menu showing javascript and additional nav class together with column-right, content alignment defining css class -->
+			<div id="topnav" class="nav column-right">
+				<!-- home link linking to #home anchor section including h1 and h2 titles, business explainer paragraph, and read more button -->
+				<li><a href="#home">Home</a></li>
+				<!-- Self-Care link linking to #Self-Care anchor section with services -->
+				<li><a href="#Self-Care">Self-Care</a></li>
+				<!-- gallery link linking to #gallery anchor section with thumbnail gallery -->
+				<li><a href="#Our Service">Our Servide</a></li>
+				<!-- contact link linking to #contact anchor section with the contact form. Link also works as individual button with button css class -->
+				<li><a class="button" href="#Contact">Contact</a></li>
+				<!-- javscript defaults to undefined and does not load to a new page from hyperlink reference, icon menu for mobile to prompt mobile menu when clicked on -->
+				<li><a href="javascript:void(0);" class="burger-icon" onclick="mobileMenu()">
+					<!-- Font awesome bars icon definition with i tag -->
+					<i class="fa fa-bars">
+					<!-- closing i tag -->
+					</i>
+					<!-- closingg tag for the mobile navigation icon link -->
+					</a>
+				<!-- closing tag for the list item tag -->
+				</li>
+			<!-- closing tag for navigation div -->
+			</div>
+		<!-- closing tag for main-header div -->
+		</div>
+	<!-- closing tag for header div -->
+	</div>
+	<!-- home section div start with id home and css class section to define the height and with of the similar sections later on -->
+	<div id="home" class="section">
+		<!-- section-container class to define horisontal flex and refine content in the section -->
+		<div class="section-container">
+		<!-- page's only h1 tag with defining content what the page is about, and also for seo purposes -->
+		<h1>Mental health advise for all struggling through the pandemic</h1><br>
+		<!-- h2 tag with further defining content, and specifying target group for the services, and also for seo purposes -->
+		<h2>Explore what works for you</h2><br>
+		<!-- opening paragraph to explain the service a bit more to a user/lead -->
+		<p> Since March 2020, many lives were effected by the COVID-19 pandemic.<br>
+		Many circumstances such as remote working/studying, lack of social interaction and loneliness has led mental health becoming more promanent. <br><br>
+		Our focus is YOU<br>
+		One-Step is designed to help you self-guide yourself back to being you again<br>
+		We also offers consultation to those needed<br>
+		<!-- closing paragraph tag -->
+		</p>
+		<!-- hyperlink with class button to direct user to the services #Self-Care section -->
+		<a  href="#Self-Care" class="centerbutton">Read more</a>
+		<!-- section-container closing tag -->
+		</div>
+	<!-- home section closing tag -->
+	</div>
+	<!-- Self-Care section opening tag with class section -->
+	<div id="Self-Care" class="section">
+		<!-- div with class section-container to customise section properties with css -->
+		<div class="section-container">
+			<!-- div with class column and fullwidth to create full width section with section title and utilise more in the later section -->
+			<div class="column fullwidth">
+				<!-- h2 title for Self-Care services -->
+				<h2>Self-Care</h2>
+			<!-- closing tag for fullwidth content part -->
+			</div>
+			<!-- column class for one third column to be used with css flex and to enhance responsive behavior -->
+			<div class="column">
+				<!-- first service image -->
+				<picture>
+					<source type="image/webp" srcset="img/face-to-face-Self-Care-dublin.webp">
+					<source type="image/jpeg" srcset="img/face-to-face-Self-Care-dublin.jpg">
+					<img src="img/face-to-face-Self-Care-dublin.jpg" alt="Face to face Self-Care" class="responsive">
+				</picture>
+				<!-- h3 title tag for the first service (face to face Self-Care) -->
+				<h3>Face to face Self-Care</h3>
+				<!-- paragraph telling more about the service -->
+				<p class="Self-Care-text">
+				With almost 90 percent of people in Ireland having been vaccinated we have now possibility to let you book face to face Self-Care.
+				The Self-Care will take place in our Dublin office location at the city center.
+				</p>
+			<!-- closing tag for the first column -->
+			</div>
+			<!-- column class for one third column to be used with css flex -->
+			<div class="column">
+				<!-- second service image -->
+				<picture>
+					<source type="image/webp" srcset="img/online-Self-Care.webp">
+					<source type="image/jpeg" srcset="img/online-Self-Care.jpg">
+					<img src="img/online-Self-Care.jpg" alt="Online Self-Care" class="responsive">
+				</picture>
+				<!-- h3 title tag for the second service (online Self-Care) -->
+				<h3>Online Self-Care</h3>
+				<!-- paragraph telling more about the service -->
+				<p class="Self-Care-text">
+				We offer online Self-Care for individuals or couples through Microsoft Teams or Zoom.
+				This delivery method is also suitable for still unvaccinated people without the covid-19 green certification.
+				</p>
+			<!-- closing tag for the second column -->
+			</div>
+			<!-- column class for one third column to be used with css flex -->
+			<div class="column">
+				<picture>
+					<source type="image/webp" srcset="img/quick-self-assessment.webp">
+					<source type="image/jpeg" srcset="img/quick-self-assessment.jpg">
+					<img src="img/quick-self-assessment.jpg" alt="Quick self assessment" class="responsive">
+				</picture>
+				<h3>Quick self-assessment</h3>
+				<p class="Self-Care-text.last">How often have you had suicidal thoughts on the last month?</p><br>
+				<span id="optionOne" onclick="selfAssessment(this.id)" class="small button">Not at all</span><br>
+				<span id="optionTwo" onclick="selfAssessment(this.id)" class="small button">Once</span><br>
+				<span id="optionThree" onclick="selfAssessment(this.id)" class="small button">Twice or more</span><br>
+				<p class="your-results">Your result:<br> <span id="results"></span>
+				</p>
+			<!-- closing tag for the third column -->
+			</div>
+		<!-- section-container closing tag -->
+		</div>
+	<!-- Self-Care section closing tag -->
+	</div>
+	<!-- gallery section opening tag with class section -->
+	<div id="gallery" class="section">
+		<!-- div with class section-container to customise section properties with css -->
+		<div class="section-container">
+			<!-- div with class column and fullwidth to create full width section with section title -->
+			<div class="column fullwidth">
+				<!-- h2 title for Self-Care services -->
+				<h2>Gallery</h2>
+			<!-- closing tag for fullwidth content part -->
+			</div>
+			<!-- div with class gallery-grid to define thumbnail modal gallery with eight images, customised and using w3schools.com tutorial as reference: https://www.w3schools.com/howto/howto_css_modal_images.asp -->
+			<div class="gallery-grid">
+				<!-- modal trigger image 1 -->
+				<picture>
+					<source type="image/webp" srcset="img/couples-Self-Care-face-to-face-session-small.webp" media="(max-width: 767px)">
+					<source type="image/webp" srcset="img/couples-Self-Care-face-to-face-session.webp" media="(min-width: 768px)">
+					<source type="image/jpeg" srcset="img/couples-Self-Care-face-to-face-session-small.jpg" media="(max-width: 767px)">
+					<source type="image/jpeg" srcset="img/couples-Self-Care-face-to-face-session.jpg" media="(min-width: 768px)">
+					<img id="imgOne" src="img/couples-Self-Care-face-to-face-session.jpg" alt="Couples Self-Care, face to face session" class="responsive-gallery">
+				</picture>
+				<!-- modal trigger image 2 -->
+				<picture>
+					<source type="image/webp" srcset="img/happy-couple-after-therapy-small.webp" media="(max-width: 767px)">
+					<source type="image/webp" srcset="img/happy-couple-after-therapy.webp" media="(min-width: 768px)">
+					<source type="image/jpeg" srcset="img/happy-couple-after-therapy-small.jpg" media="(max-width: 767px)">
+					<source type="image/jpeg" srcset="img/happy-couple-after-therapy.jpg" media="(min-width: 768px)">
+					<img id="imgTwo" src="img/happy-couple-after-therapy.jpg" alt="Happy couple after therapy" class="responsive-gallery">
+				</picture>
+				<!-- modal trigger image 3 -->
+				<picture>
+					<source type="image/webp" srcset="img/married-couple-Self-Care-small.webp" media="(max-width: 767px)">
+					<source type="image/webp" srcset="img/married-couple-Self-Care.webp" media="(min-width: 768px)">
+					<source type="image/jpeg" srcset="img/married-couple-Self-Care-small.jpg" media="(max-width: 767px)">
+					<source type="image/jpeg" srcset="img/married-couple-Self-Care.jpg" media="(min-width: 768px)">
+					<img id="imgThree" src="img/married-couple-Self-Care.jpg" alt="Married couple Self-Care" class="responsive-gallery">
+				</picture>
+				<!-- modal trigger image 4 -->
+				<picture>
+					<source type="image/webp" srcset="img/help-in-daily-life-small.webp" media="(max-width: 767px)">
+					<source type="image/webp" srcset="img/help-in-daily-life.webp" media="(min-width: 768px)">
+					<source type="image/jpeg" srcset="img/help-in-daily-life-small.jpg" media="(max-width: 767px)">
+					<source type="image/jpeg" srcset="img/help-in-daily-life.jpg" media="(min-width: 768px)">
+					<img id="imgFour" src="img/help-in-daily-life.jpg" alt="Help in daily life" class="responsive-gallery">
+				</picture>
+				<!-- modal trigger image 5 -->
+				<picture>
+					<source type="image/webp" srcset="img/healthy-mind-healthy-body-small.webp" media="(max-width: 767px)">
+					<source type="image/webp" srcset="img/healthy-mind-healthy-body.webp" media="(min-width: 768px)">
+					<source type="image/jpeg" srcset="img/healthy-mind-healthy-body-small.jpg" media="(max-width: 767px)">
+					<source type="image/jpeg" srcset="img/healthy-mind-healthy-body.jpg" media="(min-width: 768px)">
+					<img id="imgFive" src="img/healthy-mind-healthy-body.jpg" alt="Healthy mind, healthy body" class="responsive-gallery">
+				</picture>
+				<!-- modal trigger image 6 -->
+				<picture>
+					<source type="image/webp" srcset="img/mistakes-are-proof-you-are-trying-small.webp" media="(max-width: 767px)">
+					<source type="image/webp" srcset="img/mistakes-are-proof-you-are-trying.webp" media="(min-width: 768px)">
+					<source type="image/jpeg" srcset="img/mistakes-are-proof-you-are-trying-small.jpg" media="(max-width: 767px)">
+					<source type="image/jpeg" srcset="img/mistakes-are-proof-you-are-trying.jpg" media="(min-width: 768px)">
+					<img id="imgSix" src="img/mistakes-are-proof-you-are-trying.jpg" alt="Mistakes are proof you are trying" class="responsive-gallery">
+				</picture>
+				<!-- modal trigger image 7 -->
+				<picture>
+					<source type="image/webp" srcset="img/we-can-help-your-anxiety-small.webp" media="(max-width: 767px)">
+					<source type="image/webp" srcset="img/we-can-help-your-anxiety.webp" media="(min-width: 768px)">
+					<source type="image/jpeg" srcset="img/we-can-help-your-anxiety-small.jpg" media="(max-width: 768px)">
+					<source type="image/jpeg" srcset="img/we-can-help-your-anxiety.jpg" media="(min-width: 767px)">
+					<img id="imgSeven" src="img/we-can-help-your-anxiety.jpg" alt="We ccan help your anxiety" class="responsive-gallery">
+				</picture>		
+				<!-- modal trigger image 8 -->
+				<picture>
+					<source type="image/webp" srcset="img/positive-morning-thoughts-small.webp" media="(max-width: 767px)">
+					<source type="image/webp" srcset="img/positive-morning-thoughts.webp" media="(min-width: 768px)">
+					<source type="image/jpeg" srcset="img/positive-morning-thoughts-small.jpg" media="(max-width: 767px)">
+					<source type="image/jpeg" srcset="img/positive-morning-thoughts.jpg" media="(min-width: 768px)">
+					<img id="imgEight" src="img/positive-morning-thoughts.jpg" alt="Positive morning thoughts" class="responsive-gallery">
+				</picture>	
+			<!-- closing tag for gallery grid -->
+			</div>
+			<!-- modal div to be displayed when a user clicks any of the modal divs with ids from imgOne to imgEight -->
+			<div id="imageModal" class="modal">
+				<!-- button to close the modal by a user with multiplication sign looking like cross -->
+				<span class="closing-button">&times;</span>
+				<!-- show the full modal image to a user, imgExpanded class to define properties for the bigger image -->
+				<img class="modal-img" id="imgExpanded">
+				<!-- modal caption shown by modal image's correspongind alt text and activated with javascript -->
+				<div id="caption"></div>
+			<!-- closing tag for modal div -->
+			</div>
+		<!-- section-container closing tag -->
+		</div>
+	<!-- gallery section closing tag -->
+	</div>
+	<!-- contact section opening tag with class section -->
+	<div id="contact" class="section">
+		<!-- div with class section-container to customise section properties with css -->
+		<div class="section-container">
+			<!-- div with class column and fullwidth to create full width section with section title -->
+			<div class="column fullwidth">
+				<!-- h2 title for contact section -->
+				<h2>Contact</h2>
+			<!-- closing tag for the first fullwidth content part -->
+			</div>
+			<!-- div with class column and fullwidth to create full width section with section title -->
+			<div class="form-column fullwidth">
+				<!-- form tag to create HTML5 form and to validate it with javascript and HTML, there is no screen refresh because of return false when clicking submit
+				Online form creation background reference material from w3schools: https://www.w3schools.com/howto/howto_css_contact_form.asp -->
+				<form id="contactForm" name="contactForm" action="" onsubmit="formValidation();return false;" method="post">
+				<!-- name label for clarification for the text input field to get user's name -->
+				<label>Name*</label><br>
+				<!-- input with the type text to specify field input -->
+				<input type="text" name="name" id="name" required><br>
+				<!-- phone number label for clarification for the tel input field to get user's phone number -->
+				<label>Phone number*</label><br>
+				<!-- input with the type tel to specify field input -->
+				<input type="tel" name="phoneNumber" id="phone" required><br>
+				<!-- Email label for clarification for the tel input field to get user's email -->
+				<label>Email*</label><br>
+				<!-- input with the type email to validate with html -->
+				<input type="email" name="email" id="email" required><br>
+				<!-- Message label for clarification for the textarea input field to get user's message -->
+				<label>Message*</label><br>
+				<!-- input with the type email to specify the field input -->
+				<textarea rows="5" cols="50" name="message" id="message" required></textarea><br>
+				<!-- input with type submit to create a submit button for the form -->
+				<input type="submit" value="Submit">
+				<!-- form closing tag -->
+				</form>
+				<!-- initially hidden form submission success message division with id success-message -->
+				<div id="success-message">
+					<!-- paragraph with the success message -->
+					<p class="form">Thank you for contacting us. We will be in touch soon.</p>
+				</div>
+			<!-- closing tag for the second fullwidth content part -->
+			</div>
+		<!-- section-container closing tag -->
+		</div>
+	<!-- contact section closing tag -->
+	</div>
+	<!-- external scripts located in root's js folder, the file to be loaded is called scripts.js -->
+	<script src="js/scripts.js"></script>
+<!-- body closing tag -->
+</body>
+<!-- html document closing tag -->	
+</html>
